@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Huawei ICT Academy</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      :root {
+        --huawei-blue: #17a2b8;
+        --huawei-purple: #6610f2;
+      }
+
+      .about-container {
+        max-width: 1200px;
+        margin: 2rem auto;
+        padding: 0 15px;
+      }
+
+      .section-title {
+        color: white;
+        padding: 1rem;
+        border-radius: 4px;
+        margin-bottom: 1rem;
+        background-color: var(--huawei-blue);
+      }
+
+      .feature-card {
+        border: none;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+        height: 100%;
+      }
+
+      .feature-card:hover {
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        transform: translateY(-5px);
+      }
+
+      .feature-icon {
+        font-size: 2.5rem;
+        color: var(--huawei-blue);
+        margin-bottom: 1rem;
+      }
+
+      .stat-card {
+        background-color: var(--huawei-purple);
+        color: white;
+        border-radius: 8px;
+        padding: 1.5rem;
+        text-align: center;
+        height: 100%;
+      }
+
+      .stat-number {
+        font-size: 2.5rem;
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+      }
+
+      .partner-logo {
+        height: 100px;
+        object-fit: contain;
+        filter: grayscale(100%);
+        transition: all 0.3s ease;
+      }
+
+      .partner-logo:hover {
+        filter: grayscale(0%);
+      }
+
+      .mission-card {
+        background-color: #f8f9fa;
+        border-radius: 8px;
+        padding: 2rem;
+        margin-bottom: 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">UFAS ICT Academy</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="./huawei-landing-page.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./huawei-landing-page.html#courses"
+                >Courses</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="./huawei-landing-page.html#certificate-section"
+                >Certificate</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./huawei-landing-page.html#contact"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- about content -->
+    <div class="about-container">
+      <h1 class="text-center mb-5">About Huawei ICT Academy</h1>
+
+      <!-- Mission Statement -->
+      <div class="mission-card">
+        <h2 class="text-center mb-4">Our Mission</h2>
+        <p class="lead text-center">
+          Bridging the gap between industry and academia by cultivating ICT
+          talent ecosystem and promoting industry development.
+        </p>
+      </div>
+
+      <!-- Key Features -->
+      <h2 class="section-title">What We Offer</h2>
+      <div class="row g-4 mb-5">
+        <div class="col-md-4">
+          <div class="card feature-card">
+            <div class="card-body text-center">
+              <i class="bi bi-laptop feature-icon"></i>
+              <h3 class="card-title">Industry-Leading Curriculum</h3>
+              <p class="card-text">
+                Access to Huawei's latest technology courses and certification
+                paths
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card feature-card">
+            <div class="card-body text-center">
+              <i class="bi bi-people feature-icon"></i>
+              <h3 class="card-title">Expert Instructors</h3>
+              <p class="card-text">
+                Learn from certified Huawei instructors and industry
+                professionals
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card feature-card">
+            <div class="card-body text-center">
+              <i class="bi bi-graph-up feature-icon"></i>
+              <h3 class="card-title">Career Development</h3>
+              <p class="card-text">
+                Direct pathway to industry recognition and professional growth
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Statistics -->
+      <h2 class="section-title">Our Impact</h2>
+      <div class="row g-4 mb-5">
+        <div class="col-md-3">
+          <div class="stat-card">
+            <div class="stat-number">2000+</div>
+            <div class="stat-label">Partner Institutions</div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="stat-card">
+            <div class="stat-number">50K+</div>
+            <div class="stat-label">Students Certified</div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="stat-card">
+            <div class="stat-number">100+</div>
+            <div class="stat-label">Countries</div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="stat-card">
+            <div class="stat-number">90%</div>
+            <div class="stat-label">Employment Rate</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Programs -->
+      <h2 class="section-title">Our Programs</h2>
+      <div class="row g-4 mb-5">
+        <div class="col-md-6">
+          <div class="card feature-card">
+            <div class="card-body">
+              <h3>Certification Tracks</h3>
+              <ul class="list-unstyled">
+                <li>
+                  <i class="bi bi-check-circle-fill text-success me-2"></i>HCIA
+                  (Associate Level)
+                </li>
+                <li>
+                  <i class="bi bi-check-circle-fill text-success me-2"></i>HCIP
+                  (Professional Level)
+                </li>
+                <li>
+                  <i class="bi bi-check-circle-fill text-success me-2"></i>HCIE
+                  (Expert Level)
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card feature-card">
+            <div class="card-body">
+              <h3>Technology Domains</h3>
+              <ul class="list-unstyled">
+                <li>
+                  <i class="bi bi-check-circle-fill text-success me-2"></i>Cloud
+                  Computing & AI
+                </li>
+                <li>
+                  <i class="bi bi-check-circle-fill text-success me-2"></i>5G &
+                  Networking
+                </li>
+                <li>
+                  <i class="bi bi-check-circle-fill text-success me-2"></i>Big
+                  Data & IoT
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Call to Action -->
+      <div class="text-center mb-5">
+        <h2 class="mb-4">Join Our Network</h2>
+        <p class="lead mb-4">Become part of the global ICT talent ecosystem</p>
+        <button
+          class="btn btn-lg"
+          style="background-color: var(--huawei-blue); color: white"
+        >
+          Apply Now
+        </button>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-5">
+      <div class="container">
+        <div class="row">
+          <!-- Useful Links Column -->
+          <div class="col-lg-4 mb-4">
+            <h4 class="text-info mb-4">Useful links</h4>
+            <ul class="list-unstyled">
+              <li class="mb-2">
+                <a href="#" class="text-light text-decoration-none"
+                  >Ministry of Higher Education and Scientific Research</a
+                >
+              </li>
+              <li class="mb-2">
+                <a href="#" class="text-light text-decoration-none"
+                  >General Directorate for Scientific Research and Technological
+                  Development</a
+                >
+              </li>
+              <li class="mb-2">
+                <a href="#" class="text-light text-decoration-none"
+                  >Algerian Research Network</a
+                >
+              </li>
+              <li class="mb-2">
+                <a href="#" class="text-light text-decoration-none"
+                  >Research Center for Scientific and Technical Information</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Digital Libraries Column -->
+          <div class="col-lg-4 mb-4">
+            <h4 class="text-info mb-4">Digital libraries</h4>
+            <ul class="list-unstyled">
+              <li class="mb-2">
+                <a href="#" class="text-light text-decoration-none"
+                  >Engineering Techniques</a
+                >
+              </li>
+              <li class="mb-2">
+                <a href="#" class="text-light text-decoration-none"
+                  >National Online Documentation System</a
+                >
+              </li>
+              <li class="mb-2">
+                <a href="#" class="text-light text-decoration-none"
+                  >Maghreb Virtual Science Library</a
+                >
+              </li>
+              <li class="mb-2">
+                <a href="#" class="text-light text-decoration-none"
+                  >Science Directe</a
+                >
+              </li>
+              <li class="mb-2">
+                <a href="#" class="text-light text-decoration-none"
+                  >World Digital Library</a
+                >
+              </li>
+              <li class="mb-2">
+                <a href="#" class="text-light text-decoration-none"
+                  >Thematic agency for research in the social sciences and
+                  humanities</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Contact Column -->
+          <div class="col-lg-4 mb-4">
+            <h4 class="text-info mb-4">Contact</h4>
+            <ul class="list-unstyled">
+              <li class="mb-2">l'Université de Sétif 1 – Ferhat Abbas</li>
+              <li class="mb-2">
+                <a href="tel:++213 (0)36 62 02 23">+213 (0)36 62 02 23</a>
+              </li>
+              <li class="mb-2">
+                <a href="mailto:contact@univ-setif.dz">contact@univ-setif.dz</a>
+              </li>
+            </ul>
+            <div class="university-logo mt-3">
+              <!-- You can add the university logo here -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Copyright Bar -->
+        <div class="row mt-4">
+          <div class="col-12">
+            <hr class="border-secondary" />
+            <p class="text-center mb-0">
+              &copy; 2024 UFAS ICT Academy. All rights reserved.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

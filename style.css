@@ -1,0 +1,346 @@
+:root {
+  --primary: #0b2447;
+  --secondary: #19376d;
+  --light: #ffffff;
+  --gray: #6c757d;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Inter", sans-serif;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Poppins", sans-serif;
+}
+
+.navbar {
+  background: var(--primary);
+  padding: 1rem 0;
+}
+/* Navbar Fix */
+nav {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Ensure navbar stays on top */
+  background-color: #002855; /* Adjust navbar color for visibility */
+}
+.navbar-brand {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--light) !important;
+}
+
+.nav-link {
+  color: var(--light) !important;
+  margin: 0 1rem;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #a3c7ff !important;
+}
+
+.hero {
+  position: relative;
+  min-height: 80vh;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("./images/hero-banner.png"),
+    url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); /* Overlay and image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white; /* Ensures text is readable */
+  z-index: 1;
+}
+
+/* Hero Content */
+.hero-content {
+  position: relative;
+  z-index: 1;
+  padding: 3rem 0;
+}
+
+.text-dark {
+  color: #000; /* Ensure dark text visibility */
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  padding: 5rem 0;
+}
+
+.btn-primary {
+  background: var(--secondary);
+  border-color: var(--secondary);
+  padding: 0.8rem 2rem;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: var(--primary);
+  border-color: var(--primary);
+  transform: translateY(-2px);
+}
+
+.course-card {
+  border: none;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.course-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Equal height image holders for cards */
+.course-card .card-img-top {
+  height: 200px; /* Adjust this value based on the smallest image height */
+  object-fit: cover; /* Ensures images maintain their aspect ratio while filling the container */
+  width: 100%; /* Makes the image span the full width of its container */
+}
+
+.feature-icon {
+  font-size: 2.5rem;
+  color: var(--secondary);
+  margin-bottom: 1rem;
+}
+
+.counter-box {
+  text-align: center;
+  padding: 2rem;
+  background: var(--light);
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.counter {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--secondary);
+}
+
+.testimonial-card {
+  background: var(--light);
+  border-radius: 15px;
+  padding: 2rem;
+  margin: 1rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.cta-section {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  padding: 5rem 0;
+  color: var(--light);
+}
+
+footer {
+  background: var(--primary);
+  color: var(--light);
+  padding: 3rem 0;
+}
+
+.social-icon {
+  color: var(--light);
+  font-size: 1.5rem;
+  margin: 0 1rem;
+  transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+  color: #a3c7ff;
+  transform: translateY(-3px);
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-in {
+  animation: slideIn 0.6s ease forwards;
+}
+
+@media (max-width: 768px) {
+  .hero-content {
+    text-align: center;
+    padding: 3rem 0;
+  }
+
+  .counter-box {
+    margin-bottom: 1rem;
+  }
+}
+footer {
+  background: linear-gradient(to right, var(--primary), var(--secondary));
+  color: #f8f9fa;
+}
+
+footer h4 {
+  font-weight: 600;
+  color: #17a2b8; /* Info color */
+}
+
+footer ul li a {
+  color: #d1d1d1;
+  transition: color 0.3s;
+}
+
+footer ul li a:hover {
+  color: #17a2b8 !important;
+  text-decoration: underline !important;
+}
+
+hr.border-secondary {
+  border-color: #6c757d;
+}
+
+.university-logo {
+  max-width: 150px;
+  height: auto;
+}
+
+@media (max-width: 992px) {
+  .col-lg-4 {
+    text-align: center;
+  }
+
+  .university-logo {
+    margin: 0 auto;
+  }
+}
+.certification-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 15px;
+}
+
+.section-title {
+  color: white;
+  padding: 1rem;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+.cloud-service {
+  background-color: #17a2b8;
+}
+
+.ict-infrastructure {
+  background-color: #6610f2;
+}
+
+.cert-item {
+  border: 1px solid #dee2e6;
+  padding: 0.75rem;
+  margin-bottom: 0.5rem;
+  border-radius: 4px;
+  background-color: white;
+  transition: all 0.3s ease;
+}
+
+.cert-item:hover {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.certification-levels {
+  position: sticky;
+  top: 20px;
+}
+
+.cert-level {
+  background-color: #17a2b8;
+  color: white;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.cert-level:nth-child(2) {
+  background-color: #138496;
+}
+
+.cert-level:nth-child(3) {
+  background-color: #0f6674;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(100%); /* Inverts white to black (darkens the icon) */
+}
+
+/* Position the arrows outside */
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5%; /* Adjust arrow area width */
+}
+
+.carousel-control-prev {
+  left: -5%; /* Move previous arrow to the left */
+}
+
+.carousel-control-next {
+  right: -5%; /* Move next arrow to the right */
+}
+
+/* Center the carousel text and testimonial cards */
+.testimonial-card {
+  max-width: 1440px;
+  margin: 0 auto; /* Center-align content */
+  text-align: center; /* Center text inside the card */
+  padding: 1.5rem;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-image {
+  width: 60px;
+  height: 60px;
+  background-size: cover;
+  background-position: center;
+}
