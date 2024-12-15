@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Add Marked and Highlight.js from CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css"
+    />
+
+    <link rel="stylesheet" href="./style_chatbot.css" />
+    <title>Chatbot Interface</title>
+  </head>
+  <body>
+    <div class="chat-container" aria-label="Chatbot Interface">
+      <div class="chat-messages" id="chat-messages" aria-live="polite"></div>
+      <div class="chat-input" aria-label="Message input area">
+        <input
+          type="text"
+          id="user-input"
+          placeholder="Type your message..."
+          aria-label="Type your message"
+        />
+        <button id="send-button" aria-label="Send message">✈️</button>
+      </div>
+    </div>
+    <script src="./chatbot_script.js"></script>
+  </body>
+</html>
