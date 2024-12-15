@@ -528,9 +528,15 @@
                   required
                 ></textarea>
               </div>
-              <button type="submit" class="btn btn-primary">
+              <button type="submit" id="submitButton" class="btn btn-primary">
                 Send Message
               </button>
+              <!-- Add these elements for status messages -->
+              <div id="loadingIndicator" class="d-none text-primary mt-3">
+                Sending message...
+              </div>
+              <div id="successMessage" class="text-success mt-3"></div>
+              <div id="errorMessage" class="text-danger mt-3"></div>
             </form>
           </div>
           <div class="col-lg-6">

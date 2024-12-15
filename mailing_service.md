@@ -1,3 +1,4 @@
+```js
 class EmailService {
   constructor() {
     this.PUBLIC_KEY = "PD1zox9xtV3d0Qs6-";
@@ -116,7 +117,7 @@ class EmailService {
     try {
       // Show loading state
       submitButton.disabled = true;
-      loadingIndicator.classList.remove("d-none");
+      loadingIndicator.style.display = "block";
 
       // Prepare template parameters
       const templateParams = {
@@ -142,7 +143,7 @@ class EmailService {
     } finally {
       // Reset loading state
       submitButton.disabled = false;
-      loadingIndicator.classList.add("d-none");
+      loadingIndicator.style.display = "none";
     }
   }
 
@@ -153,3 +154,4 @@ class EmailService {
 
 // Initialize email service
 const emailService = new EmailService();
+```
