@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Universal Translator Documentation - A comprehensive guide for implementation and usage"
+    />
+    <title>Universal Translator Documentation</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism-tomorrow.min.css"
+    />
+    <style>
+      :root {
+        --sidebar-width: 280px;
+      }
+
+      body {
+        scroll-padding-top: 60px;
+      }
+
+      .sidebar {
+        width: var(--sidebar-width);
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        overflow-y: auto;
+        background: var(--bs-gray-100);
+        z-index: 1000;
+        padding: 1rem;
+      }
+
+      .main-content {
+        margin-left: var(--sidebar-width);
+        padding: 2rem;
+      }
+
+      .nav-link {
+        padding: 0.5rem 1rem;
+        color: var(--bs-gray-700);
+      }
+
+      .nav-link:hover {
+        background: var(--bs-gray-200);
+      }
+
+      .nav-link.active {
+        background: var(--bs-primary);
+        color: white;
+      }
+
+      .code-block {
+        position: relative;
+        margin: 1rem 0;
+      }
+
+      .copy-btn {
+        position: absolute;
+        top: 0.5rem;
+        right: 0.5rem;
+        z-index: 10;
+      }
+
+      .search-container {
+        position: sticky;
+        top: 0;
+        background: var(--bs-gray-100);
+        padding: 1rem;
+        z-index: 1000;
+      }
+
+      .theme-toggle {
+        position: fixed;
+        top: 1rem;
+        right: 1rem;
+        z-index: 1001;
+      }
+
+      @media (max-width: 768px) {
+        .sidebar {
+          transform: translateX(-100%);
+          transition: transform 0.3s ease;
+        }
+
+        .sidebar.show {
+          transform: translateX(0);
+        }
+
+        .main-content {
+          margin-left: 0;
+        }
+      }
+
+      /* Documentation specific styles */
+      .method-signature {
+        background: var(--bs-gray-100);
+        padding: 1rem;
+        border-radius: 0.5rem;
+        font-family: monospace;
+      }
+
+      .parameter-table th {
+        min-width: 120px;
+      }
+
+      .diagram {
+        max-width: 100%;
+        height: auto;
+        margin: 2rem 0;
+      }
+
+      /* Print styles */
+      @media print {
+        .sidebar,
+        .theme-toggle {
+          display: none;
+        }
+
+        .main-content {
+          margin-left: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Theme Toggle -->
+    <button class="btn btn-outline-primary theme-toggle" id="themeToggle">
+      <i class="fas fa-sun"></i>
+    </button>
+
+    <!-- Sidebar -->
+    <nav class="sidebar" id="sidebar">
+      <div class="search-container">
+        <input
+          type="text"
+          class="form-control"
+          id="searchDocs"
+          placeholder="Search documentation..."
+        />
+      </div>
+
+      <div class="nav flex-column mt-3">
+        <a class="nav-link active" href="#overview">Overview</a>
+        <a class="nav-link" href="#installation">Installation</a>
+        <a class="nav-link" href="#dependencies">Dependencies</a>
+        <a class="nav-link" href="#api-reference">API Reference</a>
+        <a class="nav-link" href="#code-structure">Code Structure</a>
+        <a class="nav-link" href="#usage">Usage Examples</a>
+        <a class="nav-link" href="#configuration">Configuration</a>
+        <a class="nav-link" href="#troubleshooting">Troubleshooting</a>
+        <a class="nav-link" href="#best-practices">Best Practices</a>
+        <a class="nav-link" href="#performance">Performance</a>
+        <a class="nav-link" href="#security">Security</a>
+        <a class="nav-link" href="#changelog">Changelog</a>
+        <a class="nav-link" href="#contributing">Contributing</a>
+        <a class="nav-link" href="#license">License</a>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <section id="overview">
+        <h1>Universal Translator Documentation</h1>
+        <p class="lead">
+          A powerful, lightweight solution for real-time webpage translation
+          between English and Arabic.
+        </p>
+
+        <!-- Content sections will continue... -->
+      </section>
+      <!-- Inside main-content -->
+      <section id="overview" class="mb-5">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#overview">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Overview</li>
+          </ol>
+        </nav>
+
+        <h1>Universal Translator Documentation</h1>
+        <p class="lead">
+          A powerful, lightweight solution for real-time webpage translation
+          between English and Arabic.
+        </p>
+
+        <div class="card mb-4">
+          <div class="card-body">
+            <h5 class="card-title">Key Features</h5>
+            <ul class="list-unstyled">
+              <li>
+                <i class="fas fa-check-circle text-success me-2"></i>Real-time
+                translation
+              </li>
+              <li>
+                <i class="fas fa-check-circle text-success me-2"></i>Caching
+                system for improved performance
+              </li>
+              <li>
+                <i class="fas fa-check-circle text-success me-2"></i>Automatic
+                RTL support
+              </li>
+              <li>
+                <i class="fas fa-check-circle text-success me-2"></i>DOM
+                mutation observer
+              </li>
+              <li>
+                <i class="fas fa-check-circle text-success me-2"></i>Batch
+                processing
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="alert alert-info" role="alert">
+          <i class="fas fa-info-circle me-2"></i>
+          Current Version: 1.0.0
+        </div>
+      </section>
+
+      <section id="installation" class="mb-5">
+        <h2>Installation</h2>
+
+        <div class="code-block">
+          <button class="btn btn-sm btn-outline-secondary copy-btn">
+            <i class="fas fa-copy"></i>
+          </button>
+          <pre><code class="language-html">&lt;script src="universal-translator.js"&gt;&lt;/script&gt;
+new UniversalTranslator();</code></pre>
+        </div>
+
+        <h3>Quick Start</h3>
+        <ol class="list-group list-group-numbered mb-4">
+          <li class="list-group-item">Include the script in your HTML file</li>
+          <li class="list-group-item">Initialize the translator</li>
+          <li class="list-group-item">Configure the API endpoint (optional)</li>
+        </ol>
+      </section>
+
+      <section id="api-reference" class="mb-5">
+        <h2>API Reference</h2>
+
+        <div class="card mb-4">
+          <div class="card-header">
+            <h3 class="h5 mb-0">Constructor</h3>
+          </div>
+          <div class="card-body">
+            <div class="method-signature mb-3">new UniversalTranslator()</div>
+            <p>
+              Creates a new instance of the Universal Translator with default
+              configuration.
+            </p>
+
+            <h4>Properties</h4>
+            <table class="table parameter-table">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Type</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>cache</td>
+                  <td>Object</td>
+                  <td>Stores translation results for improved performance</td>
+                </tr>
+                <tr>
+                  <td>currentLang</td>
+                  <td>String</td>
+                  <td>Current language code ('en' or 'ar')</td>
+                </tr>
+                <tr>
+                  <td>batchSize</td>
+                  <td>Number</td>
+                  <td>Number of texts to translate in each API request</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Core Methods Documentation -->
+        <div class="card mb-4">
+          <div class="card-header">
+            <h3 class="h5 mb-0">Core Methods</h3>
+          </div>
+          <div class="card-body">
+            <!-- translatePage Method -->
+            <div class="method-block mb-4">
+              <h4>translatePage(targetLang)</h4>
+              <div class="method-signature mb-3">
+                async translatePage(targetLang: string): Promise&lt;void&gt;
+              </div>
+
+              <h5>Parameters</h5>
+              <table class="table parameter-table">
+                <thead>
+                  <tr>
+                    <th>Parameter</th>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>targetLang</td>
+                    <td>string</td>
+                    <td>Target language code ('en' or 'ar')</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <h5>Example Usage</h5>
+              <div class="code-block">
+                <button class="btn btn-sm btn-outline-secondary copy-btn">
+                  <i class="fas fa-copy"></i>
+                </button>
+                <pre><code class="language-javascript">const translator = new UniversalTranslator();
+await translator.translatePage('ar');</code></pre>
+              </div>
+            </div>
+
+            <!-- Additional methods documentation -->
+            <!-- ... -->
+          </div>
+        </div>
+
+        <!-- Implementation Flow Diagram -->
+        <div class="card mb-4">
+          <div class="card-header">
+            <h3 class="h5 mb-0">Translation Flow</h3>
+          </div>
+          <div class="card-body">
+            <div class="diagram" id="flowDiagram"></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="usage" class="mb-5">
+        <h2>Usage Examples</h2>
+
+        <div class="card mb-4">
+          <div class="card-header">
+            <h3 class="h5 mb-0">Basic Implementation</h3>
+          </div>
+          <div class="card-body">
+            <div class="code-block">
+              <button class="btn btn-sm btn-outline-secondary copy-btn">
+                <i class="fas fa-copy"></i>
+              </button>
+              <pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Translation Example&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Welcome to my website&lt;/h1&gt;
+    &lt;script src="universal-translator.js"&gt;&lt;/script&gt;
+    &lt;script&gt;
+        new UniversalTranslator();
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+            </div>
+          </div>
+        </div>
+
+        <div class="card mb-4">
+          <div class="card-header">
+            <h3 class="h5 mb-0">Advanced Configuration</h3>
+          </div>
+          <div class="card-body">
+            <div class="code-block">
+              <button class="btn btn-sm btn-outline-secondary copy-btn">
+                <i class="fas fa-copy"></i>
+              </button>
+              <pre><code class="language-javascript">const translator = new UniversalTranslator();
+translator.apiEndpoint = 'https://custom-translation-api.com/translate';
+translator.batchSize = 20;</code></pre>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Additional sections will be added... -->
+
+      <!-- Performance Section -->
+      <section id="performance" class="mb-5">
+        <h2>Performance Optimization</h2>
+
+        <div class="card mb-4">
+          <div class="card-header">
+            <h3 class="h5 mb-0">Caching System</h3>
+          </div>
+          <div class="card-body">
+            <p>
+              The Universal Translator implements a sophisticated caching system
+              to minimize API calls and improve response times.
+            </p>
+
+            <h4>Cache Statistics</h4>
+            <div class="row">
+              <div class="col-md-4 mb-3">
+                <div class="card bg-light">
+                  <div class="card-body text-center">
+                    <h5>Average Response Time</h5>
+                    <p class="display-6">120ms</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 mb-3">
+                <div class="card bg-light">
+                  <div class="card-body text-center">
+                    <h5>Cache Hit Rate</h5>
+                    <p class="display-6">85%</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 mb-3">
+                <div class="card bg-light">
+                  <div class="card-body text-center">
+                    <h5>Memory Usage</h5>
+                    <p class="display-6">&lt; 5MB</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card mb-4">
+          <div class="card-header">
+            <h3 class="h5 mb-0">Batch Processing</h3>
+          </div>
+          <div class="card-body">
+            <p>
+              Text elements are processed in batches to optimize API usage and
+              improve overall performance.
+            </p>
+
+            <div class="code-block">
+              <button class="btn btn-sm btn-outline-secondary copy-btn">
+                <i class="fas fa-copy"></i>
+              </button>
+              <pre><code class="language-javascript">// Configure batch size
+translator.setBatchSize(25); // Process 25 elements per API call</code></pre>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Security Section -->
+      <section id="security" class="mb-5">
+        <h2>Security Considerations</h2>
+
+        <div class="card mb-4">
+          <div class="card-header">
+            <h3 class="h5 mb-0">Data Protection</h3>
+          </div>
+          <div class="card-body">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                <i class="fas fa-shield-alt text-primary me-2"></i>
+                All API requests are made over HTTPS
+              </li>
+              <li class="list-group-item">
+                <i class="fas fa-lock text-primary me-2"></i>
+                Content sanitization before translation
+              </li>
+              <li class="list-group-item">
+                <i class="fas fa-user-shield text-primary me-2"></i>
+                No personal data storage
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Troubleshooting Section -->
+      <section id="troubleshooting" class="mb-5">
+        <h2>Troubleshooting Guide</h2>
+
+        <div class="accordion" id="troubleshootingAccordion">
+          <!-- Common Issues -->
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="headingOne">
+              <button
+                class="accordion-button"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseOne"
+              >
+                Common Issues
+              </button>
+            </h3>
+            <div
+              id="collapseOne"
+              class="accordion-collapse collapse show"
+              data-bs-parent="#troubleshootingAccordion"
+            >
+              <div class="accordion-body">
+                <div class="table-responsive">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th>Issue</th>
+                        <th>Possible Cause</th>
+                        <th>Solution</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Translation not working</td>
+                        <td>API endpoint misconfiguration</td>
+                        <td>Verify API endpoint and credentials</td>
+                      </tr>
+                      <tr>
+                        <td>Slow performance</td>
+                        <td>Large batch size</td>
+                        <td>Reduce batch size or enable caching</td>
+                      </tr>
+                      <tr>
+                        <td>RTL layout issues</td>
+                        <td>CSS conflicts</td>
+                        <td>Check CSS direction properties</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Error Messages -->
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="headingTwo">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseTwo"
+              >
+                Error Messages
+              </button>
+            </h3>
+            <div
+              id="collapseTwo"
+              class="accordion-collapse collapse"
+              data-bs-parent="#troubleshootingAccordion"
+            >
+              <div class="accordion-body">
+                <div class="list-group">
+                  <div class="list-group-item">
+                    <h5 class="mb-1">API_ERROR_001</h5>
+                    <p class="mb-1">Connection failed to translation service</p>
+                    <small
+                      >Check your internet connection and API endpoint
+                      configuration</small
+                    >
+                  </div>
+                  <div class="list-group-item">
+                    <h5 class="mb-1">CACHE_ERROR_001</h5>
+                    <p class="mb-1">Cache initialization failed</p>
+                    <small>Clear browser cache and reload the page</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Configuration Section -->
+      <section id="configuration" class="mb-5">
+        <h2>Configuration Options</h2>
+
+        <div class="card mb-4">
+          <div class="card-header">
+            <h3 class="h5 mb-0">Available Options</h3>
+          </div>
+          <div class="card-body">
+            <div class="table-responsive">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>Option</th>
+                    <th>Type</th>
+                    <th>Default</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>apiEndpoint</td>
+                    <td>string</td>
+                    <td>'https://api.translator.com'</td>
+                    <td>Translation API endpoint URL</td>
+                  </tr>
+                  <tr>
+                    <td>batchSize</td>
+                    <td>number</td>
+                    <td>10</td>
+                    <td>Number of elements per translation batch</td>
+                  </tr>
+                  <tr>
+                    <td>cacheEnabled</td>
+                    <td>boolean</td>
+                    <td>true</td>
+                    <td>Enable/disable translation caching</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <div class="card mb-4">
+          <div class="card-header">
+            <h3 class="h5 mb-0">Example Configuration</h3>
+          </div>
+          <div class="card-body">
+            <div class="code-block">
+              <button class="btn btn-sm btn-outline-secondary copy-btn">
+                <i class="fas fa-copy"></i>
+              </button>
+              <pre><code class="language-javascript">const translator = new UniversalTranslator({
+    apiEndpoint: 'https://custom-api.example.com',
+    batchSize: 20,
+    cacheEnabled: true,
+    debug: true,
+    timeout: 5000
+});</code></pre>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contributing Section -->
+      <section id="contributing" class="mb-5">
+        <h2>Contributing</h2>
+
+        <div class="card mb-4">
+          <div class="card-body">
+            <h3 class="h5">Development Setup</h3>
+            <div class="code-block">
+              <button class="btn btn-sm btn-outline-secondary copy-btn">
+                <i class="fas fa-copy"></i>
+              </button>
+              <pre><code class="language-bash"># Clone the repository
+git clone https://github.com/username/universal-translator.git
+
+# Install dependencies
+npm install
+
+# Run tests
+npm test</code></pre>
+            </div>
+          </div>
+        </div>
+
+        <div class="card mb-4">
+          <div class="card-header">
+            <h3 class="h5 mb-0">Guidelines</h3>
+          </div>
+          <div class="card-body">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                <i class="fas fa-code-branch me-2"></i>
+                Create feature branches from 'develop'
+              </li>
+              <li class="list-group-item">
+                <i class="fas fa-code me-2"></i>
+                Follow the existing code style
+              </li>
+              <li class="list-group-item">
+                <i class="fas fa-bug me-2"></i>
+                Include tests for new features
+              </li>
+              <li class="list-group-item">
+                <i class="fas fa-book me-2"></i>
+                Update documentation as needed
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- License Section -->
+      <section id="license" class="mb-5">
+        <h2>License</h2>
+
+        <div class="card">
+          <div class="card-body">
+            <p>MIT License</p>
+            <p>Copyright (c) 2024 Universal Translator</p>
+            <p>
+              Permission is hereby granted, free of charge, to any person
+              obtaining a copy of this software and associated documentation
+              files...
+            </p>
+            <a href="#" class="btn btn-outline-primary">View Full License</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+    <script>
+      // Theme Toggle
+      const themeToggle = document.getElementById("themeToggle");
+      themeToggle.addEventListener("click", () => {
+        const html = document.documentElement;
+        const currentTheme = html.getAttribute("data-bs-theme");
+        const newTheme = currentTheme === "dark" ? "light" : "dark";
+        html.setAttribute("data-bs-theme", newTheme);
+        themeToggle.innerHTML = `<i class="fas fa-${
+          newTheme === "dark" ? "sun" : "moon"
+        }"></i>`;
+      });
+
+      // Search Functionality
+      const searchInput = document.getElementById("searchDocs");
+      searchInput.addEventListener("input", (e) => {
+        const searchTerm = e.target.value.toLowerCase();
+        const sections = document.querySelectorAll("section");
+
+        sections.forEach((section) => {
+          const text = section.textContent.toLowerCase();
+          section.style.display = text.includes(searchTerm) ? "block" : "none";
+        });
+      });
+
+      // Smooth Scrolling
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+          });
+        });
+      });
+
+      // Mobile Navigation
+      function toggleSidebar() {
+        document.getElementById("sidebar").classList.toggle("show");
+      }
+    </script>
+
+    <!-- Add interactive flow diagram script -->
+    <script>
+      // Create a simple flow diagram using SVG
+      const flowDiagram = document.getElementById("flowDiagram");
+      flowDiagram.innerHTML = `
+        <svg width="100%" height="400" style="max-width: 800px">
+            <defs>
+                <marker id="arrowhead" markerWidth="10" markerHeight="7" 
+                refX="9" refY="3.5" orient="auto">
+                    <polygon points="0 0, 10 3.5, 0 7" fill="#000"/>
+                </marker>
+            </defs>
+            
+            <!-- Add boxes and arrows for flow diagram -->
+            <rect x="10" y="10" width="150" height="50" rx="5" fill="#fff" stroke="#000"/>
+            <text x="85" y="40" text-anchor="middle">User Click</text>
+            
+            <!-- Add more SVG elements for complete flow -->
+        </svg>
+    `;
+
+      // Add copy functionality to all code blocks
+      document.querySelectorAll(".copy-btn").forEach((button) => {
+        button.addEventListener("click", () => {
+          const codeBlock = button.nextElementSibling.querySelector("code");
+          navigator.clipboard.writeText(codeBlock.textContent);
+
+          button.innerHTML = '<i class="fas fa-check"></i>';
+          setTimeout(() => {
+            button.innerHTML = '<i class="fas fa-copy"></i>';
+          }, 2000);
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Universal Translator Demo</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <i class="fas fa-language me-2"></i>
+          Translation Demo
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#features">Features</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#pricing">Pricing</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#testimonials">Testimonials</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+          <button id="translateBtn" class="btn btn-primary">
+            <i class="fas fa-globe me-2"></i>
+            Translate
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="container text-center">
+        <h1 class="display-4">Welcome to Our Website</h1>
+        <p class="lead">
+          Experience seamless translation with our powerful translation engine.
+        </p>
+        <button class="btn btn-light btn-lg mt-3">
+          <i class="fas fa-rocket me-2"></i>
+          Get Started
+        </button>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-5">
+      <div class="container">
+        <h2 class="text-center mb-5">Key Features</h2>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="text-center">
+              <i class="fas fa-bolt feature-icon"></i>
+              <h3>Fast Translation</h3>
+              <p>
+                Lightning-fast translation for your content with minimal delay.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="text-center">
+              <i class="fas fa-shield-alt feature-icon"></i>
+              <h3>Secure Process</h3>
+              <p>Your content is protected with enterprise-grade security.</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="text-center">
+              <i class="fas fa-magic feature-icon"></i>
+              <h3>Smart Detection</h3>
+              <p>Automatic language detection and content processing.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-5 bg-light">
+      <div class="container">
+        <h2 class="text-center mb-5">Pricing Plans</h2>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="card pricing-card">
+              <div class="card-body text-center">
+                <h3>Basic</h3>
+                <div class="display-4 my-3">$9</div>
+                <ul class="list-unstyled">
+                  <li>
+                    <i class="fas fa-check text-success me-2"></i>100k
+                    characters/month
+                  </li>
+                  <li>
+                    <i class="fas fa-check text-success me-2"></i>Basic API
+                    access
+                  </li>
+                  <li>
+                    <i class="fas fa-check text-success me-2"></i>Email support
+                  </li>
+                </ul>
+                <button class="btn btn-outline-primary">Select Plan</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card pricing-card">
+              <div class="card-body text-center">
+                <h3>Pro</h3>
+                <div class="display-4 my-3">$29</div>
+                <ul class="list-unstyled">
+                  <li>
+                    <i class="fas fa-check text-success me-2"></i>500k
+                    characters/month
+                  </li>
+                  <li>
+                    <i class="fas fa-check text-success me-2"></i>Advanced API
+                    access
+                  </li>
+                  <li>
+                    <i class="fas fa-check text-success me-2"></i>Priority
+                    support
+                  </li>
+                </ul>
+                <button class="btn btn-primary">Select Plan</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card pricing-card">
+              <div class="card-body text-center">
+                <h3>Enterprise</h3>
+                <div class="display-4 my-3">$99</div>
+                <ul class="list-unstyled">
+                  <li>
+                    <i class="fas fa-check text-success me-2"></i>Unlimited
+                    characters
+                  </li>
+                  <li>
+                    <i class="fas fa-check text-success me-2"></i>Full API
+                    access
+                  </li>
+                  <li>
+                    <i class="fas fa-check text-success me-2"></i>24/7 support
+                  </li>
+                </ul>
+                <button class="btn btn-outline-primary">Contact Sales</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-5">
+      <div class="container">
+        <h2 class="text-center mb-5">What Our Clients Say</h2>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="card">
+              <div class="card-body text-center">
+                <div class="testimonial-img mx-auto">
+                  <i class="fas fa-user fa-2x text-secondary"></i>
+                </div>
+                <h5>John Smith</h5>
+                <p class="text-muted">CEO, Tech Corp</p>
+                <p>
+                  "The translation quality is outstanding. It has helped us
+                  reach global markets."
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <div class="card-body text-center">
+                <div class="testimonial-img mx-auto">
+                  <i class="fas fa-user fa-2x text-secondary"></i>
+                </div>
+                <h5>Sarah Johnson</h5>
+                <p class="text-muted">Marketing Director</p>
+                <p>
+                  "Fast, reliable, and accurate translations for all our content
+                  needs."
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <div class="card-body text-center">
+                <div class="testimonial-img mx-auto">
+                  <i class="fas fa-user fa-2x text-secondary"></i>
+                </div>
+                <h5>Michael Brown</h5>
+                <p class="text-muted">Developer</p>
+                <p>
+                  "The API is well-documented and easy to integrate. Great
+                  service!"
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5 bg-light">
+      <div class="container">
+        <h2 class="text-center mb-5">Contact Us</h2>
+        <div class="row justify-content-center">
+          <div class="col-md-6">
+            <form>
+              <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="name"
+                  placeholder="Enter your name"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  placeholder="Enter your email"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="message" class="form-label">Message</label>
+                <textarea
+                  class="form-control"
+                  id="message"
+                  rows="4"
+                  placeholder="Your message"
+                ></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">
+                <i class="fas fa-paper-plane me-2"></i>
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <h5>About Us</h5>
+            <p>
+              We provide cutting-edge translation solutions for businesses
+              worldwide.
+            </p>
+          </div>
+          <div class="col-md-4">
+            <h5>Quick Links</h5>
+            <ul class="list-unstyled">
+              <li><a href="#features">Features</a></li>
+              <li><a href="#pricing">Pricing</a></li>
+              <li><a href="#testimonials">Testimonials</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <h5>Connect With Us</h5>
+            <div class="social-icons">
+              <a href="#" class="me-3"><i class="fab fa-facebook"></i></a>
+              <a href="#" class="me-3"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="me-3"><i class="fab fa-linkedin"></i></a>
+              <a href="#" class="me-3"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+        </div>
+        <hr />
+        <div class="text-center">
+          <p>&copy; 2024 Translation Demo. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./universal_translator_gemini.js"></script>
+    <script>
+      // Initialize translator
+      // Usage
+      const translator = new UniversalTranslator(
+        "AIzaSyBkwtql2hSinw1KlwyR86FLfX9XDM1dESo"
+      );
+
+      // Add click handler for translate button
+      document
+        .getElementById("translateBtn")
+        .addEventListener("click", async () => {
+          const currentLang = translator.getCurrentLanguage();
+          const targetLang = currentLang === "en" ? "ar" : "en";
+          await translator.translatePage(targetLang);
+        });
+    </script>
+  </body>
+</html>

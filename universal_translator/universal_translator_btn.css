@@ -1,0 +1,76 @@
+.translator-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  background: #ffffff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.translator-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.translator-btn:focus {
+  outline: 3px solid #4a90e2;
+  outline-offset: 2px;
+}
+
+.translator-btn[aria-busy="true"] {
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+.spinner {
+  display: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #f3f3f3;
+  border-top: 2px solid #3498db;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+.translator-btn[aria-busy="true"] .spinner {
+  display: inline-block;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.lang-icon {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+[dir="rtl"] {
+  direction: rtl;
+  text-align: right;
+}
+
+@media (max-width: 768px) {
+  .translator-btn {
+    top: 10px;
+    right: 10px;
+    padding: 8px 12px;
+  }
+}
