@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="x-apple-disable-message-reformatting" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="supported-color-schemes" content="light dark" />
+    <title>Responsive Email</title>
+    <style>
+      /* Inline styles for email compatibility */
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #f5f5f5;
+        color: #333;
+      }
+      table {
+        border-spacing: 0;
+        border-collapse: collapse;
+        width: 100%;
+        max-width: 600px;
+        margin: auto;
+        background-color: #ffffff;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+      }
+      .container {
+        padding: 20px;
+      }
+      .header {
+        background-color: #e01a25;
+        color: #ffffff;
+        padding: 20px;
+        text-align: center;
+      }
+      .header img {
+        width: 120px;
+        margin-bottom: 10px;
+      }
+      .content {
+        padding: 20px;
+      }
+      .footer {
+        background-color: #333333;
+        color: #ffffff;
+        padding: 20px;
+        font-size: 12px;
+        text-align: center;
+      }
+      .footer a {
+        color: #e01a25;
+        text-decoration: none;
+      }
+      .social-icons img {
+        width: 24px;
+        margin: 0 5px;
+      }
+      .btn {
+        display: inline-block;
+        background-color: #e01a25;
+        color: #ffffff;
+        text-decoration: none;
+        padding: 10px 20px;
+        border-radius: 4px;
+        font-size: 16px;
+        margin-top: 10px;
+      }
+      @media screen and (max-width: 768px) {
+        .header,
+        .footer {
+          text-align: center;
+        }
+        .content {
+          padding: 10px;
+        }
+      }
+      @media screen and (max-width: 480px) {
+        .btn {
+          font-size: 14px;
+          padding: 8px 16px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <table role="presentation">
+      <!-- Header Section -->
+      <tr>
+        <td class="header">
+          <img
+            src="https://example.com/logo-placeholder.png"
+            alt="Huawei ICT Academy Logo"
+          />
+          <p>Contact Us: support@huawei-ict.com</p>
+        </td>
+      </tr>
+
+      <!-- Main Content Section -->
+      <tr>
+        <td class="content">
+          <h2>Hello {{to_name}},</h2>
+          <p>You received a new message from {{from_name}}:</p>
+          <blockquote
+            style="
+              padding: 12px;
+              border-left: 4px solid #e01a25;
+              font-style: italic;
+              background-color: #f9f9f9;
+            "
+          >
+            {{message}}
+          </blockquote>
+          <p>
+            <a
+              href="{{cta_link}}"
+              class="btn"
+              style="
+                display: inline-block;
+                background-color: #e01a25;
+                color: #fff;
+                text-decoration: none;
+                padding: 10px 20px;
+                border-radius: 4px;
+                font-size: 16px;
+              "
+            >
+              Take Action
+            </a>
+          </p>
+          <p><strong>Sent by:</strong> {{from_name}}</p>
+          <p>
+            <img
+              src="{{image_url}}"
+              alt="Optional Illustration"
+              style="max-width: 100%; height: auto; border: none"
+            />
+          </p>
+        </td>
+      </tr>
+
+      <!-- Footer Section -->
+      <tr>
+        <td class="footer">
+          <p>Follow Us:</p>
+          <p class="social-icons">
+            <a href="https://facebook.com"
+              ><img src="https://example.com/facebook-icon.png" alt="Facebook"
+            /></a>
+            <a href="https://twitter.com"
+              ><img src="https://example.com/twitter-icon.png" alt="Twitter"
+            /></a>
+            <a href="https://linkedin.com"
+              ><img src="https://example.com/linkedin-icon.png" alt="LinkedIn"
+            /></a>
+          </p>
+          <p>&copy; 2024 Huawei ICT Academy. All rights reserved.</p>
+          <p>
+            <a href="#">Unsubscribe</a> |
+            <a href="#">Privacy Policy</a>
+          </p>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
