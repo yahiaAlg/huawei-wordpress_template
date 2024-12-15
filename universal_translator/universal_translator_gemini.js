@@ -4,15 +4,15 @@ class UniversalTranslator {
     this.currentLang = "en";
     this.originalTexts = new WeakMap();
     this.pendingRequests = new Map();
-    this.batchSize = 5; // Reduced from 10 to prevent quota exhaustion
-    this.maxConcurrentRequests = 2;
+    this.batchSize = 2; // Reduced from 10 to prevent quota exhaustion
+    this.maxConcurrentRequests = 1;
     this.debounceTimeout = null;
     this.geminiApiKey = geminiApiKey;
     // Rate limiting properties
     this.requestQueue = [];
     this.isProcessing = false;
-    this.rateLimitDelay = 1000; // 1 second between requests
-    this.maxRetries = 3;
+    this.rateLimitDelay = 10000; // 1 second between requests
+    this.maxRetries = 2;
     this.retryDelay = 2000; // 2 seconds before retry
     this.lastRequestTime = 0;
     this.init();
@@ -78,7 +78,7 @@ class UniversalTranslator {
   }
 
   async detectLanguage(text) {
-    const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=${this.geminiApiKey}`;
+    const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro:generateContent?key=${this.geminiApiKey}`;
 
     const prompt = {
       contents: [
@@ -123,11 +123,11 @@ class UniversalTranslator {
   }
 
   init() {
-    this.createButton();
-    this.loadUserPreference();
-    document.addEventListener("DOMContentLoaded", () =>
-      this.observeDOMChanges()
-    );
+    document.addEventListener("DOMContentLoaded", () => {
+      this.createButton();
+      // this.loadUserPreference();
+      this.observeDOMChanges();
+    });
   }
 
   async toggleTranslation() {
@@ -262,8 +262,14 @@ class UniversalTranslator {
 
   loadUserPreference() {
     const savedLang = localStorage.getItem("preferredLanguage");
-    if (savedLang && savedLang !== "en") {
-      this.toggleTranslation();
+    if (savedLang) {
+      this.currentLang = savedLang;
+      document.documentElement.setAttribute(
+        "dir",
+        savedLang === "ar" ? "rtl" : "ltr"
+      );
+      // Only update the UI direction without translating
+      this.updateDocumentDirection(savedLang);
     }
   }
 
@@ -366,7 +372,7 @@ class UniversalTranslator {
 
       for (const chunk of chunks) {
         try {
-          const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=${this.geminiApiKey}`;
+          const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro:generateContent?key=${this.geminiApiKey}`;
 
           const data = {
             contents: [
@@ -455,7 +461,7 @@ class UniversalTranslator {
 curl \
   -H "Content-Type: application/json" \
   -d "{\"contents\":[{\"parts\":[{\"text\":\"Explain how AI works\"}]}]}" \
-  -X POST "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=AIzaSyC-Aj1TmsnXKVlZJth-yL0s6tjLbPAt5D4"
+  -X POST "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro:generateContent?key=AIzaSyC-Aj1TmsnXKVlZJth-yL0s6tjLbPAt5D4"
 
 
 */

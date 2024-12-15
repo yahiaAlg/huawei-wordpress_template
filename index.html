@@ -21,6 +21,10 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="./universal_translator/universal_translator_btn.css"
+    />
   </head>
   <body>
     <!-- Navbar -->
@@ -699,5 +703,22 @@
     <script src="./main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
     <script src="./mailing_service.js"></script>
+    <script src="./universal_translator/universal_translator_gemini.js"></script>
+    <!-- <script>
+      // Initialize translator
+      // Usage
+      const translator = new UniversalTranslator(
+        "AIzaSyBkwtql2hSinw1KlwyR86FLfX9XDM1dESo"
+      );
+
+      // Add click handler for translate button
+      document
+        .getElementById("translateBtn")
+        .addEventListener("click", async () => {
+          const currentLang = translator.getCurrentLanguage();
+          const targetLang = currentLang === "en" ? "ar" : "en";
+          await translator.translatePage(targetLang);
+        });
+    </script> -->
   </body>
 </html>
