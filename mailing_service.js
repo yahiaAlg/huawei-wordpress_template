@@ -120,8 +120,9 @@ class EmailService {
 
       // Prepare template parameters
       const templateParams = {
-        to_name: formData.name,
-        from_name: "UFAS 1 Huawei-ICT team",
+        to_name: "UFAS 1 Huawei-ICT team",
+        from_name: formData.name,
+        from_email: formData.email,
         message: formData.message,
         reply_to: formData.email,
       };
