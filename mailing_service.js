@@ -3,7 +3,7 @@ class EmailService {
     this.PUBLIC_KEY = "PD1zox9xtV3d0Qs6-";
     this.SERVICE_ID = "service_ydo1xhm"; // Replace with your service ID
     this.TEMPLATE_ID = "template_idlzfmb"; // Replace with your template ID
-    this.debugMode = true;
+    this.debugMode = false;
     this.retryAttempts = 3;
     this.retryDelay = 1000;
     this.rateLimit = {
